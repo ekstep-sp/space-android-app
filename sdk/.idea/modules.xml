@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1160219944/app.iml" filepath="$PROJECT_DIR$/.idea/modules/-1160219944/app.iml" group="ws-android/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/sdk.iml" group="ws-android/sdk" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1246876090/ws-android.iml" filepath="$PROJECT_DIR$/.idea/modules/-1246876090/ws-android.iml" group="ws-android" />
+    </modules>
+  </component>
+</project>

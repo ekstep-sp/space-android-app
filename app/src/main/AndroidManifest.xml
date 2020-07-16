@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name=".LexApplication"
+        android:name="ekstep.societal.space.LexApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +30,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SplashScreenActivity">
+            android:name="ekstep.societal.space.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +48,7 @@
         </receiver>
 
         <activity
-            android:name=".HomeActivity"
+            android:name="ekstep.societal.space.HomeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
 
             <intent-filter>
@@ -63,10 +63,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayerActivity"
+            android:name="ekstep.societal.space.PlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".DownloadsWebView"
+            android:name="ekstep.societal.space.DownloadsWebView"
             android:configChanges="keyboardHidden|orientation|screenSize">
 
             <!-- <intent-filter> -->
@@ -77,40 +77,40 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".TocWebView"
+            android:name="ekstep.societal.space.TocWebView"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="ekstep.societal.space.SettingsActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".ExternalPlayerActivity"
+            android:name="ekstep.societal.space.ExternalPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <service
-            android:name=".services.DeleteDecryptedService"
+            android:name="ekstep.societal.space.services.DeleteDecryptedService"
             android:exported="false" />
         <service
             android:name="com.infosysit.sdk.services.EncrpytDecryptService"
             android:exported="false" />
         <service
-            android:name=".services.TelemetryLearningService"
+            android:name="ekstep.societal.space.services.TelemetryLearningService"
             android:exported="false" />
         <service
-            android:name=".services.TelemetryPlayerService"
+            android:name="ekstep.societal.space.services.TelemetryPlayerService"
             android:exported="false" />
         <service
-            android:name=".services.TelemetryQuizSubmission"
+            android:name="ekstep.societal.space.services.TelemetryQuizSubmission"
             android:exported="false" />
 
         <receiver
-            android:name=".services.DatabaseChangedReceiver"
+            android:name="ekstep.societal.space.services.DatabaseChangedReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name=".DATABASE_CHANGED" />
             </intent-filter>
         </receiver> <!-- [END firebase_service] -->
         <service
-            android:name=".services.DownloadAllowedCheck"
+            android:name="ekstep.societal.space.services.DownloadAllowedCheck"
             android:exported="false" />
     </application>
 

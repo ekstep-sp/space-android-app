@@ -22,7 +22,7 @@ android {
     }
     buildTypes {
         release {
-            resValue "string", "app_name", "Rainforest"
+            resValue "string", "app_name", "Space"
             debuggable false
             minifyEnabled true
             shrinkResources true
@@ -30,7 +30,7 @@ android {
             signingConfig signingConfigs.config
         }
         debug {
-            resValue "string", "app_name", "Rainforest"
+            resValue "string", "app_name", "Space"
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

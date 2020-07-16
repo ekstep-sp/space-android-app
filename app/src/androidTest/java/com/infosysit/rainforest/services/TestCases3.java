@@ -6,7 +6,9 @@ import android.os.Environment;
 import android.support.test.rule.ActivityTestRule;
 import android.util.Log;
 
-import com.infosysit.rainforest.HomeActivity;
+import ekstep.societal.space.HomeActivity;
+import ekstep.societal.space.services.DownloadsBridge;
+import ekstep.societal.space.services.WebViewBridgeJava;
 
 import com.infosysit.sdk.Constants;
 import com.infosysit.sdk.persistence.SharedPrefrence;

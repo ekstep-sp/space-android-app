@@ -5,7 +5,7 @@ import android.net.wifi.WifiManager;
 import android.support.test.rule.ActivityTestRule;
 import android.util.Log;
 
-import com.infosysit.rainforest.HomeActivity;
+import ekstep.societal.space.HomeActivity;
 import com.infosysit.sdk.persistence.SharedPrefrence;
 
 import org.junit.Rule;

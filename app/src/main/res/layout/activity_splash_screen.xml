@@ -12,12 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
-        android:text="@string/rainforest"
-        android:textSize="70sp"
-        android:textColor="@color/colorPrimary">
-
-
+        android:text="@string/space"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp">
     </TextView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

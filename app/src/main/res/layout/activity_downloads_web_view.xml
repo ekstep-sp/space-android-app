@@ -5,7 +5,7 @@
     android:id="@+id/downloads_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.infosysit.rainforest.DownloadsWebView">
+    tools:context="com.infosysit.rainforest.ekstep.infosysit.rainforest.DownloadsWebView">
 
 
     <include

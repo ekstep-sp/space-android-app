@@ -5,9 +5,9 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-import com.infosysit.rainforest.services.OpenRapBridge;
+import ekstep.societal.space.services.OpenRapBridge;
 import com.infosysit.rainforest.services.TestConstants;
-import com.infosysit.rainforest.services.WebViewBridgeJava;
+import ekstep.societal.space.services.WebViewBridgeJava;
 import com.infosysit.sdk.Constants;
 import com.infosysit.sdk.persistence.AppDatabase;
 import com.infosysit.sdk.persistence.entity.DownloadStatusEntity;

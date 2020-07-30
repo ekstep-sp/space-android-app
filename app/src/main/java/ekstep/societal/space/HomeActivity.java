@@ -39,24 +39,24 @@ import android.widget.Toast;
 
 
 import com.google.gson.JsonObject;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
 import ekstep.societal.space.services.ConnectivityReceiver;
 import ekstep.societal.space.services.WebViewBridgeJava;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
 import com.scottyab.rootbeer.RootBeer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-import static com.infosysit.sdk.Constants.PATH_PARAM;
-import static com.infosysit.sdk.Constants.SEARCH_PARAM;
-import static com.infosysit.sdk.Constants.baseUrl;
+import static ekstep.societal.sdk.Constants.PATH_PARAM;
+import static ekstep.societal.sdk.Constants.SEARCH_PARAM;
+import static ekstep.societal.sdk.Constants.baseUrl;
 //import static com.infosysit.sdk.Constants.webViewPageStack;
-import static com.infosysit.sdk.Constants.isAuthenticated;
-import static com.infosysit.sdk.UtilityJava.isOnline;
+import static ekstep.societal.sdk.Constants.isAuthenticated;
+import static ekstep.societal.sdk.UtilityJava.isOnline;
 
 public class HomeActivity extends Activity implements ConnectivityReceiver.ConnectivityReceiverListener {
     public static WebView loginPage = null;

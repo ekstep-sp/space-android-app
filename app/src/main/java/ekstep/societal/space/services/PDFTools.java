@@ -17,7 +17,7 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 import ekstep.societal.space.Util;
 import java.io.File;
 import java.io.IOException;

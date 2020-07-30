@@ -10,11 +10,11 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ekstep.societal.space.PlayerActivity;
 import ekstep.societal.space.TocWebView;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.persistence.AppDatabase;
-import com.infosysit.sdk.persistence.entity.ContentEntity;
-import com.infosysit.sdk.persistence.entity.DownloadStatusEntity;
-import com.infosysit.sdk.services.DecryptionTask;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.persistence.AppDatabase;
+import ekstep.societal.sdk.persistence.entity.ContentEntity;
+import ekstep.societal.sdk.persistence.entity.DownloadStatusEntity;
+import ekstep.societal.sdk.services.DecryptionTask;
 
 import java.util.ArrayList;
 import java.util.List;

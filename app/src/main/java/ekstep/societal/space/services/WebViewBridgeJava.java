@@ -27,37 +27,36 @@ import com.google.gson.JsonParser;
 import ekstep.societal.space.DownloadsWebView;
 import ekstep.societal.space.ExternalPlayerActivity;
 import ekstep.societal.space.HomeActivity;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 import ekstep.societal.space.SettingsActivity;
 import ekstep.societal.space.Util;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.RoutingObserver;
-import com.infosysit.sdk.UtilityJava;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.RoutingObserver;
+import ekstep.societal.sdk.UtilityJava;
 
-import com.infosysit.sdk.persistence.SharedPrefrence;
-import com.infosysit.sdk.services.DeleteTask;
-import com.infosysit.sdk.services.DownloadContentService;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.services.DeleteTask;
+import ekstep.societal.sdk.services.DownloadContentService;
 //import com.infosysit.sdk.services.DownloadOpenRapService;
-import com.infosysit.sdk.services.JWTUtils;
-import com.infosysit.sdk.services.PlayerTelemetryService;
+import ekstep.societal.sdk.services.JWTUtils;
+import ekstep.societal.sdk.services.PlayerTelemetryService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ekstep.societal.space.ColorUtil;
 
-import static com.infosysit.sdk.Constants.EXTERNAL_CONTENT;
-import static com.infosysit.sdk.Constants.EXTERNAL_OPEN;
-import static com.infosysit.sdk.Constants.EXTRA_DOWNLOAD_MODE;
-import static com.infosysit.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
+import static ekstep.societal.sdk.Constants.EXTERNAL_CONTENT;
+import static ekstep.societal.sdk.Constants.EXTERNAL_OPEN;
+import static ekstep.societal.sdk.Constants.EXTRA_DOWNLOAD_MODE;
+import static ekstep.societal.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
 
-import static com.infosysit.sdk.Constants.IS_DOWNLOADED;
-import static com.infosysit.sdk.Constants.PATH_PARAM;
-import static com.infosysit.sdk.Constants.PERMISSION_FLAG;
-import static com.infosysit.sdk.Constants.RTMP_URL;
-import static com.infosysit.sdk.Constants.isAuthenticated;
-import static com.infosysit.sdk.Constants.contentTelemetry;
-import static com.infosysit.sdk.Constants.primeColor;
+import static ekstep.societal.sdk.Constants.IS_DOWNLOADED;
+import static ekstep.societal.sdk.Constants.PATH_PARAM;
+import static ekstep.societal.sdk.Constants.PERMISSION_FLAG;
+import static ekstep.societal.sdk.Constants.isAuthenticated;
+import static ekstep.societal.sdk.Constants.contentTelemetry;
+import static ekstep.societal.sdk.Constants.primeColor;
 //import static com.infosysit.sdk.Constants.version;
 //import static com.infosysit.sdk.Constants.webViewPageStack;
 
@@ -403,47 +402,49 @@ public class WebViewBridgeJava {
 
 
     @JavascriptInterface
-    public void GET_PLAYERCONTENT_JSON(String data){
+    public void GET_PLAYERCONTENT_JSON(String data) {
         JsonParser jsonParserObj = new JsonParser();
         JsonObject contentDataJson = jsonParserObj.parse(data).getAsJsonObject();
-        Log.d("GET_PLAYERCONTENT_JSON",contentDataJson.toString());
+        Log.d("GET_PLAYERCONTENT_JSON", contentDataJson.toString());
+        //Stopped Direct Opening of Resource with Link
+        if (contentDataJson.has("location") && contentDataJson.get("location").getAsString().contains("viewMode=RESUME")) {
 
-        if(contentDataJson.has("isIframeSupported") &&  (contentDataJson.get("isIframeSupported").getAsString().equalsIgnoreCase("no") || contentDataJson.get("isIframeSupported").getAsString().equalsIgnoreCase("maybe"))){
-            Log.d("CheckValuesUrl","Reached here: "+contentDataJson);
-            Intent activityIntent = new Intent(mContext, ExternalPlayerActivity.class);
-            activityIntent.putExtra(PATH_PARAM,contentDataJson.get("artifactUrl").getAsString());
-            activityIntent.putExtra(EXTERNAL_OPEN,EXTERNAL_CONTENT);
-            Intent playerTelemetryService = new Intent(mContext, PlayerTelemetryService.class);
-            String iframeSupportedValue = contentDataJson.get("isIframeSupported").getAsString();
-            contentTelemetry.addProperty("courseid","");
-            contentTelemetry.addProperty("resid",contentDataJson.get("identifier").getAsString());
-            contentTelemetry.addProperty("restype",contentDataJson.get("mimeType").getAsString());
-            playerTelemetryService.putExtra(Constants.TelemetryContentID,contentDataJson.get("identifier").getAsString());
-            if(iframeSupportedValue.equalsIgnoreCase("no") && !contentDataJson.get("resourceType").getAsString().equalsIgnoreCase("live stream")){
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    mContext.startForegroundService(playerTelemetryService);
-                } else {
-                    mContext.startService(playerTelemetryService);
+            if (contentDataJson.has("isIframeSupported") && (contentDataJson.get("isIframeSupported").getAsString().equalsIgnoreCase("no") || contentDataJson.get("isIframeSupported").getAsString().equalsIgnoreCase("maybe"))) {
+                Log.d("CheckValuesUrl", "Reached here: " + contentDataJson);
+                Intent activityIntent = new Intent(mContext, ExternalPlayerActivity.class);
+                activityIntent.putExtra(PATH_PARAM, contentDataJson.get("artifactUrl").getAsString());
+                activityIntent.putExtra(EXTERNAL_OPEN, EXTERNAL_CONTENT);
+                Intent playerTelemetryService = new Intent(mContext, PlayerTelemetryService.class);
+                String iframeSupportedValue = contentDataJson.get("isIframeSupported").getAsString();
+                contentTelemetry.addProperty("courseid", "");
+                contentTelemetry.addProperty("resid", contentDataJson.get("identifier").getAsString());
+                contentTelemetry.addProperty("restype", contentDataJson.get("mimeType").getAsString());
+                playerTelemetryService.putExtra(Constants.TelemetryContentID, contentDataJson.get("identifier").getAsString());
+                if (iframeSupportedValue.equalsIgnoreCase("no") && !contentDataJson.get("resourceType").getAsString().equalsIgnoreCase("live stream")) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        mContext.startForegroundService(playerTelemetryService);
+                    } else {
+                        mContext.startService(playerTelemetryService);
+                    }
                 }
-            }
-            HomeActivity.loginPage.post(new Runnable() {
-                @Override
-                public void run() {
+                HomeActivity.loginPage.post(new Runnable() {
+                    @Override
+                    public void run() {
 
-                    HomeActivity.loginPage.goBack();
+                        HomeActivity.loginPage.goBack();
 //                    webViewPageStack.pop();
 //                    HomeActivity.loginPage.evaluateJavascript("isAuthenticated()",null);
-                }
-            });
-            mContext.startActivity(activityIntent);
+                    }
+                });
+                mContext.startActivity(activityIntent);
 
-        }
+            }
 //        else if(true){
 //            Log.d(getClass().getSimpleName(),"NewApk reached here");
 //            Util.openApp(mContext,"com.example.akanshagoyal.webview");
 //        }
+        }
     }
-
     @JavascriptInterface
     public void NAVIGATION_NEW_TAB_DATA_OUTGOING(String value){
         Log.d("CHECK_VALUES",value);

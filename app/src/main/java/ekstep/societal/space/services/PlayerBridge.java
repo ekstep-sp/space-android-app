@@ -9,16 +9,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ekstep.societal.space.PlayerActivity;
 
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.DecryptionCallback;
-import com.infosysit.sdk.persistence.AppDatabase;
-import com.infosysit.sdk.persistence.SharedPrefrence;
-import com.infosysit.sdk.persistence.entity.ContentEntity;
-import com.infosysit.sdk.services.ConnectivityUtility;
-import com.infosysit.sdk.services.DecryptionTask;
-import com.infosysit.sdk.services.TelemetryServices;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.DecryptionCallback;
+import ekstep.societal.sdk.persistence.AppDatabase;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.persistence.entity.ContentEntity;
+import ekstep.societal.sdk.services.ConnectivityUtility;
+import ekstep.societal.sdk.services.DecryptionTask;
+import ekstep.societal.sdk.services.TelemetryServices;
 
-import static com.infosysit.sdk.Constants.contentTelemetry;
+import static ekstep.societal.sdk.Constants.contentTelemetry;
 
 /**
  * Created by akansha.goyal on 3/14/2018.

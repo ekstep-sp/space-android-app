@@ -19,22 +19,21 @@ import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
-import com.infosysit.rainforest.R;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.UtilityJava;
-import com.infosysit.sdk.services.ApiInterfaceJava;
-import com.infosysit.sdk.services.InstallAPK;
-import com.infosysit.sdk.services.RetrofitSingleton;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.UtilityJava;
+import ekstep.societal.sdk.services.ApiInterfaceJava;
+import ekstep.societal.sdk.services.InstallAPK;
+import ekstep.societal.sdk.services.RetrofitSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.infosysit.sdk.Constants.PATH_PARAM;
-import static com.infosysit.sdk.Constants.baseUrl;
-import static com.infosysit.sdk.Constants.connectivityMessage;
-import static com.infosysit.sdk.UtilityJava.isOnline;
-
+import static ekstep.societal.sdk.Constants.PATH_PARAM;
+import static ekstep.societal.sdk.Constants.baseUrl;
+import static ekstep.societal.sdk.Constants.connectivityMessage;
+import static ekstep.societal.sdk.UtilityJava.isOnline;
+import ekstep.societal.space.R;
 /**
  * Created by akansha.goyal on 4/19/2018.
  */

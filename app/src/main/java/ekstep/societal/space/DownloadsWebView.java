@@ -35,28 +35,28 @@ import android.widget.Toast;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
 import ekstep.societal.space.services.ConnectivityReceiver;
 import ekstep.societal.space.services.DownloadsBridge;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.persistence.AppDatabase;
-import com.infosysit.sdk.persistence.SharedPrefrence;
-import com.infosysit.sdk.persistence.entity.ContentEntity;
-import com.infosysit.sdk.persistence.entity.DownloadStatusEntity;
-import com.infosysit.sdk.services.SqlCrudService;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.persistence.AppDatabase;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.persistence.entity.ContentEntity;
+import ekstep.societal.sdk.persistence.entity.DownloadStatusEntity;
+import ekstep.societal.sdk.services.SqlCrudService;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static com.infosysit.sdk.Constants.CANCELLED;
+import static ekstep.societal.sdk.Constants.CANCELLED;
 import static ekstep.societal.space.services.WebViewBridgeJava.listOfContents;
-import static com.infosysit.sdk.Constants.FAILED;
-import static com.infosysit.sdk.Constants.INITIATED;
-import static com.infosysit.sdk.Constants.connectivityMessage;
-import static com.infosysit.sdk.Constants.openRapUrl;
-import static com.infosysit.sdk.UtilityJava.isOnline;
+import static ekstep.societal.sdk.Constants.FAILED;
+import static ekstep.societal.sdk.Constants.INITIATED;
+import static ekstep.societal.sdk.Constants.connectivityMessage;
+import static ekstep.societal.sdk.Constants.openRapUrl;
+import static ekstep.societal.sdk.UtilityJava.isOnline;
 
 public class DownloadsWebView extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 

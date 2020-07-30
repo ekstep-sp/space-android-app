@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
-import static com.infosysit.sdk.Constants.primeColor;
+import static ekstep.societal.sdk.Constants.primeColor;
 
 public class ColorUtil {
 

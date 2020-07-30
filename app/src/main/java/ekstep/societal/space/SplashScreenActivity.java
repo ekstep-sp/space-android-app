@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

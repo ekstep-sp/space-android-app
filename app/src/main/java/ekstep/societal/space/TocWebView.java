@@ -23,17 +23,17 @@ import android.widget.Toast;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
 import ekstep.societal.space.services.ConnectivityReceiver;
 import ekstep.societal.space.services.TOCBridge;
-import com.infosysit.sdk.Constants;
+import ekstep.societal.sdk.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.infosysit.sdk.Constants.connectivityMessage;
-import static com.infosysit.sdk.UtilityJava.isOnline;
+import static ekstep.societal.sdk.Constants.connectivityMessage;
+import static ekstep.societal.sdk.UtilityJava.isOnline;
 
 public class TocWebView extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener{
 

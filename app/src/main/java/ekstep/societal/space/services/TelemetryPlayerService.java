@@ -7,19 +7,19 @@ import android.util.Log;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.infosysit.sdk.TelemeteryValidation;
-import com.infosysit.sdk.UtilityJava;
-import com.infosysit.sdk.persistence.SharedPrefrence;
-import com.infosysit.sdk.services.ApiInterfaceJava;
-import com.infosysit.sdk.services.RetrofitSingleton;
+import ekstep.societal.sdk.TelemeteryValidation;
+import ekstep.societal.sdk.UtilityJava;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.services.ApiInterfaceJava;
+import ekstep.societal.sdk.services.RetrofitSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.infosysit.sdk.Constants.baseUrl;
-import static com.infosysit.sdk.Constants.openRapDownload;
-import static com.infosysit.sdk.Constants.telemetryTokenKey;
+import static ekstep.societal.sdk.Constants.baseUrl;
+import static ekstep.societal.sdk.Constants.openRapDownload;
+import static ekstep.societal.sdk.Constants.telemetryTokenKey;
 
 
 public class TelemetryPlayerService extends IntentService {

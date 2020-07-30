@@ -8,19 +8,19 @@
 
     <application>
         <service
-            android:name="com.infosysit.sdk.services.DownloadContentService"
+            android:name="com.infosysit.sdk.ekstep.infosysit.sdk.services.DownloadContentService"
             android:exported="false" />
 <!--        <service-->
 <!--            android:name=".services.DownloadOpenRapService"-->
 <!--            android:exported="false" />-->
         <service
-            android:name="com.infosysit.sdk.services.SqlCrudService"
+            android:name="com.infosysit.sdk.ekstep.infosysit.sdk.services.SqlCrudService"
             android:exported="false" />
         <service
-            android:name="com.infosysit.sdk.services.PlayerTelemetryService"
+            android:name="com.infosysit.sdk.ekstep.infosysit.sdk.services.PlayerTelemetryService"
             android:exported="false" />
         <service
-            android:name="com.infosysit.sdk.services.ExternalPlayerService"
+            android:name="com.infosysit.sdk.ekstep.infosysit.sdk.services.ExternalPlayerService"
             android:exported="false" />
 
 

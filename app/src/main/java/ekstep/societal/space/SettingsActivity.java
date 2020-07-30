@@ -10,10 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
-import static com.infosysit.sdk.Constants.connectivityMessage;
-import static com.infosysit.sdk.UtilityJava.isOnline;
+import static ekstep.societal.sdk.Constants.connectivityMessage;
+import static ekstep.societal.sdk.UtilityJava.isOnline;
 
 /**
  * Created by akansha.goyal on 5/8/2018.

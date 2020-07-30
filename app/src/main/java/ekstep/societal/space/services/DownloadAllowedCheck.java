@@ -6,17 +6,17 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.google.gson.JsonObject;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.UtilityJava;
-import com.infosysit.sdk.persistence.AppDatabase;
-import com.infosysit.sdk.services.ApiInterfaceJava;
-import com.infosysit.sdk.services.RetrofitSingleton;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.UtilityJava;
+import ekstep.societal.sdk.persistence.AppDatabase;
+import ekstep.societal.sdk.services.ApiInterfaceJava;
+import ekstep.societal.sdk.services.RetrofitSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.infosysit.sdk.Constants.baseUrl;
+import static ekstep.societal.sdk.Constants.baseUrl;
 
 
 /**

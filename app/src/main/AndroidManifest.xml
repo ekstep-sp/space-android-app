@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.infosysit.rainforest"
+    package="ekstep.societal.space"
     android:targetSandboxVersion="1">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="ekstep.societal.space.LexApplication"
+        android:name=".LexApplication"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +30,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="ekstep.societal.space.SplashScreenActivity">
+            android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,7 +40,7 @@
         <!-- <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" -->
         <!-- android:value="false"/> -->
         <!-- tools:ignore="HardcodedDebugMode" -->
-        <receiver android:name="com.infosysit.sdk.services.DownloadStatusBroadcastJava">
+        <receiver android:name="ekstep.societal.sdk.services.DownloadStatusBroadcastJava">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
@@ -48,7 +48,7 @@
         </receiver>
 
         <activity
-            android:name="ekstep.societal.space.HomeActivity"
+            android:name=".HomeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
 
             <intent-filter>
@@ -63,10 +63,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ekstep.societal.space.PlayerActivity"
+            android:name=".PlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="ekstep.societal.space.DownloadsWebView"
+            android:name=".DownloadsWebView"
             android:configChanges="keyboardHidden|orientation|screenSize">
 
             <!-- <intent-filter> -->
@@ -77,40 +77,40 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="ekstep.societal.space.TocWebView"
+            android:name=".TocWebView"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="ekstep.societal.space.SettingsActivity"
+            android:name=".SettingsActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name="ekstep.societal.space.ExternalPlayerActivity"
+            android:name=".ExternalPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <service
-            android:name="ekstep.societal.space.services.DeleteDecryptedService"
+            android:name=".services.DeleteDecryptedService"
             android:exported="false" />
         <service
-            android:name="com.infosysit.sdk.services.EncrpytDecryptService"
+            android:name="ekstep.societal.sdk.services.EncrpytDecryptService"
             android:exported="false" />
         <service
-            android:name="ekstep.societal.space.services.TelemetryLearningService"
+            android:name=".services.TelemetryLearningService"
             android:exported="false" />
         <service
-            android:name="ekstep.societal.space.services.TelemetryPlayerService"
+            android:name=".services.TelemetryPlayerService"
             android:exported="false" />
         <service
-            android:name="ekstep.societal.space.services.TelemetryQuizSubmission"
+            android:name=".services.TelemetryQuizSubmission"
             android:exported="false" />
 
         <receiver
-            android:name="ekstep.societal.space.services.DatabaseChangedReceiver"
+            android:name=".services.DatabaseChangedReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name=".DATABASE_CHANGED" />
             </intent-filter>
         </receiver> <!-- [END firebase_service] -->
         <service
-            android:name="ekstep.societal.space.services.DownloadAllowedCheck"
+            android:name=".services.DownloadAllowedCheck"
             android:exported="false" />
     </application>
 

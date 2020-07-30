@@ -17,17 +17,17 @@ import android.widget.Toast;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 
 import ekstep.societal.space.services.ConnectivityReceiver;
 import ekstep.societal.space.services.DeleteDecryptedService;
 import ekstep.societal.space.services.PlayerBridge;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.UtilityJava;
-import com.infosysit.sdk.persistence.SharedPrefrence;
-import com.infosysit.sdk.services.ApiInterfaceJava;
-import com.infosysit.sdk.services.ConnectivityUtility;
-import com.infosysit.sdk.services.RetrofitSingleton;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.UtilityJava;
+import ekstep.societal.sdk.persistence.SharedPrefrence;
+import ekstep.societal.sdk.services.ApiInterfaceJava;
+import ekstep.societal.sdk.services.ConnectivityUtility;
+import ekstep.societal.sdk.services.RetrofitSingleton;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -41,14 +41,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.infosysit.sdk.Constants.EXTERNAL_CONTENT;
-import static com.infosysit.sdk.Constants.EXTERNAL_OPEN;
-import static com.infosysit.sdk.Constants.PATH_PARAM;
-import static com.infosysit.sdk.Constants.TMP_DIR_PATH;
-import static com.infosysit.sdk.Constants.baseUrl;
-import static com.infosysit.sdk.Constants.contentTelemetry;
-import static com.infosysit.sdk.Constants.continueLearningTelemetry;
-import static com.infosysit.sdk.Constants.continueLearningTelemetryJson;
+import static ekstep.societal.sdk.Constants.EXTERNAL_CONTENT;
+import static ekstep.societal.sdk.Constants.EXTERNAL_OPEN;
+import static ekstep.societal.sdk.Constants.PATH_PARAM;
+import static ekstep.societal.sdk.Constants.TMP_DIR_PATH;
+import static ekstep.societal.sdk.Constants.baseUrl;
+import static ekstep.societal.sdk.Constants.contentTelemetry;
+import static ekstep.societal.sdk.Constants.continueLearningTelemetry;
+import static ekstep.societal.sdk.Constants.continueLearningTelemetryJson;
 
 /**
  * Created by akansha.goyal on 3/14/2018.

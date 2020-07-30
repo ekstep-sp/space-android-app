@@ -12,21 +12,21 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ekstep.societal.space.DownloadsWebView;
 import ekstep.societal.space.PlayerActivity;
-import com.infosysit.rainforest.R;
+import ekstep.societal.space.R;
 import ekstep.societal.space.TocWebView;
 import ekstep.societal.space.Util;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.persistence.AppDatabase;
-import com.infosysit.sdk.persistence.entity.ContentEntity;
-import com.infosysit.sdk.services.ConnectivityUtility;
-import com.infosysit.sdk.services.DecryptionTask;
-import com.infosysit.sdk.services.DownloadContentService;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.persistence.AppDatabase;
+import ekstep.societal.sdk.persistence.entity.ContentEntity;
+import ekstep.societal.sdk.services.ConnectivityUtility;
+import ekstep.societal.sdk.services.DecryptionTask;
+import ekstep.societal.sdk.services.DownloadContentService;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.infosysit.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
-import static com.infosysit.sdk.UtilityJava.getExtension;
+import static ekstep.societal.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
+import static ekstep.societal.sdk.UtilityJava.getExtension;
 
 /**
  * Created by akansha.goyal on 3/31/2018.

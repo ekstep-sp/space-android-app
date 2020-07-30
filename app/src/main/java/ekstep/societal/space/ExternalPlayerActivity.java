@@ -35,15 +35,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
-import com.infosysit.rainforest.R;
-import com.infosysit.sdk.Constants;
-import com.infosysit.sdk.services.ExternalPlayerService;
-import com.infosysit.sdk.services.TelemetryServices;
+import ekstep.societal.space.R;
+import ekstep.societal.sdk.Constants;
+import ekstep.societal.sdk.services.ExternalPlayerService;
+import ekstep.societal.sdk.services.TelemetryServices;
 
 import java.net.URL;
 
-import static com.infosysit.sdk.Constants.EXTERNAL_OPEN;
-import static com.infosysit.sdk.Constants.PATH_PARAM;
+import static ekstep.societal.sdk.Constants.EXTERNAL_OPEN;
+import static ekstep.societal.sdk.Constants.PATH_PARAM;
 
 public class ExternalPlayerActivity extends AppCompatActivity {
 

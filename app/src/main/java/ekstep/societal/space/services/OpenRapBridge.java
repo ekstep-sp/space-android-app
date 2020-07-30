@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
-import com.infosysit.sdk.services.DownloadContentService;
+import ekstep.societal.sdk.services.DownloadContentService;
 
-import static com.infosysit.sdk.Constants.EXTRA_DOWNLOAD_MODE;
-import static com.infosysit.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
+import static ekstep.societal.sdk.Constants.EXTRA_DOWNLOAD_MODE;
+import static ekstep.societal.sdk.Constants.EXTRA_DOWNLOAD_RES_ID;
 
 public class OpenRapBridge {
 

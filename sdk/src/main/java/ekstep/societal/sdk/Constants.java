@@ -39,7 +39,7 @@ public class Constants {
     public static String environmentType = "space";
     public static boolean downloadAllowed = true;
 
-    public static final String baseUrl = "https://space.societalplatform.org";
+    public static final String baseUrl = "https://space.societalthinking.org";
     // public static final String baseUrl = "https://ec2509d63908.ngrok.io/";
     public static final String openRapUrl = "http://captive.openrap.com";
 //public static final String openRapUrl = "";
